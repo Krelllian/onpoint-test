@@ -1,0 +1,124 @@
+//.slider__bacteria-img {}
+
+.slider__bacteria-img-1 {
+    position: absolute;
+    right: 215px;
+    top: 61px;
+    width: 65px;
+    animation: bacteria-animation-1 7s linear forwards infinite alternate;
+}
+
+.slider__bacteria-img-2 {
+    position: absolute;
+    left: 0px;
+    top: 72px;
+    width: 124px;
+}
+
+.slider__bacteria-img-3 {
+    position: absolute;
+    right: 54px;
+    top: 202px;
+    width: 107px;
+    animation: bacteria-animation-2 20s linear forwards infinite;
+}
+
+.slider__bacteria-img-4 {
+    position: absolute;
+    left: 23px;
+    top: 505px;
+    width: 71px;
+    z-index: -1;
+    animation: bacteria-animation-3 10s ease-in-out infinite alternate;
+}
+
+.slider__bacteria-img-5 {
+    position: absolute;
+    bottom: 0;
+    right: 256px;
+    width: 226px;
+    animation: bacteria-animation-4 5s linear infinite alternate;
+}
+
+.slider__bacteria-img-6 {
+    position: absolute;
+    top: 35px;
+    right: 29px;
+    width: 78px;
+    opacity: 0.5;
+}
+
+.slider__bacteria-img-7 {
+    position: absolute;
+    bottom: 63px;
+    left: 353px;
+    width: 78px;
+    opacity: 0.7;
+}
+
+.slider__pink-sperm-1 {
+    position: absolute;
+    top: 161px;
+    left: 440px;
+    width: 568px;
+}
+
+.slider__pink-sperm-2 {
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    width: 268px;
+}
+
+@keyframes bacteria-animation-1 {
+    0% {
+        transform: translate();
+    }
+
+    100% {
+        transform: translate(70%, 30%) scale(0.9);
+    }
+}
+
+@keyframes bacteria-animation-2 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    40% {
+        transform: translate(-110%, -90%) rotate(144deg);
+    }
+
+    60% {
+        transform: translate(-100%, -100%) rotate(226deg);
+
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(360deg);
+    }
+}
+
+@keyframes bacteria-animation-3 {
+    0% {
+        transform: translate(30%, 30%);
+    }
+
+    100% {
+        transform: translate(-30%, -40%);
+    }
+}
+
+@keyframes bacteria-animation-4 {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(10%) scale(1.1);
+    }
+
+    100% {
+        transform: translate(20%);
+    }
+}
