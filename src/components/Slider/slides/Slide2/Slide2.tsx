@@ -3,11 +3,11 @@ import Nav from '../../Nav/Nav'
 import './slide2.scss'
 import './slide2Sperm.scss'
 
-const spermImg1 = new URL("../../../../images/slide2_imgs/sperm_1.png", import.meta.url).toString()
-const spermImg2 = new URL("../../../../images/slide2_imgs/sperm_2.png", import.meta.url).toString()
-const spermImg3 = new URL("../../../../images/slide2_imgs/sperm_3.png", import.meta.url).toString()
-const spermImg4 = new URL("../../../../images/slide2_imgs/sperm_4.png", import.meta.url).toString()
-const spermImg5 = new URL("../../../../images/slide2_imgs/sperm_5.png", import.meta.url).toString()
+import spermImg1 from "../../../../images/slide2_imgs/sperm_1.png"
+import spermImg2 from "../../../../images/slide2_imgs/sperm_2.png"
+import spermImg3 from "../../../../images/slide2_imgs/sperm_3.png"
+import spermImg4 from "../../../../images/slide2_imgs/sperm_4.png"
+import spermImg5 from "../../../../images/slide2_imgs/sperm_5.png"
 
 const Slide2 = () => {
     const [isSpermVisible, setIsSpermVisible] = useState(false)

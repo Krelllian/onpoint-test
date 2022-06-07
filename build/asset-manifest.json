@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/onpoint-test/build/static/css/main.6ced13f7.css",
-    "main.js": "/onpoint-test/build/static/js/main.324b3a5b.js",
+    "main.js": "/onpoint-test/build/static/js/main.5594a4d5.js",
     "static/js/787.def5c76a.chunk.js": "/onpoint-test/build/static/js/787.def5c76a.chunk.js",
     "static/media/bg_2.jpg": "/onpoint-test/build/static/media/bg_2.9058b5e741242e55e624.jpg",
     "static/media/bg_3.jpg": "/onpoint-test/build/static/media/bg_3.f1e7a6e0624c46f49383.jpg",
@@ -34,11 +34,11 @@
     "static/media/home.svg": "/onpoint-test/build/static/media/home.c31ae306f8448f11f204b09a4cc9e059.svg",
     "index.html": "/onpoint-test/build/index.html",
     "main.6ced13f7.css.map": "/onpoint-test/build/static/css/main.6ced13f7.css.map",
-    "main.324b3a5b.js.map": "/onpoint-test/build/static/js/main.324b3a5b.js.map",
+    "main.5594a4d5.js.map": "/onpoint-test/build/static/js/main.5594a4d5.js.map",
     "787.def5c76a.chunk.js.map": "/onpoint-test/build/static/js/787.def5c76a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ced13f7.css",
-    "static/js/main.324b3a5b.js"
+    "static/js/main.5594a4d5.js"
   ]
 }

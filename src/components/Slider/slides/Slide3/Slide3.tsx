@@ -5,20 +5,19 @@ import './slide3Bubbles.scss'
 
 import btnPlus from '../../../../images/btn/btnPlus.png'
 import btnPrev from "../../../../images/pagination/btn_prev.png"
-
-const bottle = new URL("../../../../images/bottle_and_bubbles/bottle.png", import.meta.url).toString()
-const icon1 = new URL("../../../../images/slide3_imgs/icon1.png", import.meta.url).toString()
-const icon2 = new URL("../../../../images/slide3_imgs/icon2.png", import.meta.url).toString()
-const btnClose = new URL("../../../../images/btn/btn_close.png", import.meta.url).toString()
-const btnNext = new URL("../../../../images/pagination/btn_next.png", import.meta.url).toString()
-const bubble1 = new URL("../../../../images/bottle_and_bubbles/bubble_1.png", import.meta.url).toString()
-const bubble2 = new URL("../../../../images/bottle_and_bubbles/bubble_2.png", import.meta.url).toString()
-const bubble3 = new URL("../../../../images/bottle_and_bubbles/bubble_3.png", import.meta.url).toString()
-const bubble4 = new URL("../../../../images/bottle_and_bubbles/bubble_4.png", import.meta.url).toString()
-const bubble5 = new URL("../../../../images/bottle_and_bubbles/bubble_5.png", import.meta.url).toString()
-const bubble6 = new URL("../../../../images/bottle_and_bubbles/bubble_6.png", import.meta.url).toString()
-const bubble7 = new URL("../../../../images/bottle_and_bubbles/bubble_7.png", import.meta.url).toString()
-const bubble8 = new URL("../../../../images/bottle_and_bubbles/bubble_8.png", import.meta.url).toString()
+import bottle from "../../../../images/bottle_and_bubbles/bottle.png"
+import icon1 from "../../../../images/slide3_imgs/icon1.png"
+import icon2 from "../../../../images/slide3_imgs/icon2.png"
+import btnClose from "../../../../images/btn/btn_close.png"
+import btnNext from "../../../../images/pagination/btn_next.png"
+import bubble1 from "../../../../images/bottle_and_bubbles/bubble_1.png"
+import bubble2 from "../../../../images/bottle_and_bubbles/bubble_2.png"
+import bubble3 from "../../../../images/bottle_and_bubbles/bubble_3.png"
+import bubble4 from "../../../../images/bottle_and_bubbles/bubble_4.png"
+import bubble5 from "../../../../images/bottle_and_bubbles/bubble_5.png"
+import bubble6 from "../../../../images/bottle_and_bubbles/bubble_6.png"
+import bubble7 from "../../../../images/bottle_and_bubbles/bubble_7.png"
+import bubble8 from "../../../../images/bottle_and_bubbles/bubble_8.png"
 
 const Slide3 = () => {
     const [currentPageIndex, setCurrentPageIndex] = useState(0)

@@ -1,0 +1,23 @@
+[33mcommit 105ef8af867e2ea31f97461430e5d7983c8d4218[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Krelllian <65556888+Krelllian@users.noreply.github.com>
+Date:   Tue Jun 7 16:32:06 2022 +0300
+
+    cleanup
+
+[33mcommit aded1ac5657069bd094549328748f7804a2ceb37[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Krelllian <65556888+Krelllian@users.noreply.github.com>
+Date:   Tue Jun 7 16:20:06 2022 +0300
+
+    second and third slide
+
+[33mcommit a9073e470bb12e6a79582e1836274e41b5d2570b[m
+Author: Krelllian <65556888+Krelllian@users.noreply.github.com>
+Date:   Sat Jun 4 19:11:07 2022 +0300
+
+    first page
+
+[33mcommit 7e1f2ab84651cc9ce57fb0a47767fe5a10012501[m
+Author: Krelllian <65556888+Krelllian@users.noreply.github.com>
+Date:   Fri Jun 3 20:03:25 2022 +0300
+
+    Initialize project using Create React App
