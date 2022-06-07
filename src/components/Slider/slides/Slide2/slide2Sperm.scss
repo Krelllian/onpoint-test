@@ -1,0 +1,64 @@
+.slide-2__sperm-img1 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(100px, 50px);
+
+    &.active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all ease-in-out 3s;
+    }
+}
+
+.slide-2__sperm-img2 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(100px, 50px);
+
+    &.active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all ease-in-out 3.5s;
+    }
+}
+
+.slide-2__sperm-img3 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(100px, 50px);
+
+    &.active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all ease-in-out 3s;
+    }
+}
+
+.slide-2__sperm-img4 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(100px, 50px);
+
+    &.active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all ease-in-out 3s;
+    }
+}
+
+.slide-2__sperm-img5 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(100px, 50px);
+
+    &.active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all ease-in-out 2.5s;
+    }
+}

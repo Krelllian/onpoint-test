@@ -1,45 +1,74 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './slider.scss'
-import './bacteria.scss'
-import homeSVG from '../../images/svgs/home.svg'
-import btnRightArrow from '../../images/btn/btnRightArrow.png'
-import onpoint from '../../images/svgs/onpoint.svg'
-
-const bacteriaImg1 = new URL("../../images/bacteria/bacteria_1.png", import.meta.url).toString()
-const bacteriaImg2 = new URL("../../images/bacteria/bacteria_2.png", import.meta.url).toString()
-const bacteriaImg3 = new URL("../../images/bacteria/bacteria_3.png", import.meta.url).toString()
-const bacteriaImg4 = new URL("../../images/bacteria/bacteria_4.png", import.meta.url).toString()
-const bacteriaImg5 = new URL("../../images/bacteria/bacteria_5.png", import.meta.url).toString()
-const bacteriaImg6 = new URL("../../images/bacteria/bacteria_6_blur.png", import.meta.url).toString()
-const bacteriaImg7 = new URL("../../images/bacteria/bacteria_7_blur.png", import.meta.url).toString()
-const spermImg1 = new URL("../../images/bacteria/pink_sperm_1.png", import.meta.url).toString()
-const spermImg2 = new URL("../../images/bacteria/pink_sperm_2_blur.png", import.meta.url).toString()
+import Slide1 from './slides/Slide1/Slide1'
+import Slide2 from './slides/Slide2/Slide2'
+import Slide3 from './slides/Slide3/Slide3'
+import { SliderContext } from '../../context/SliderContext'
 
 const Slider = () => {
+    const [touchStart, setTouchStart] = useState(null)
+    const [touchEnd, setTouchEnd] = useState(null)
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+
+    let numberOfSlides: number;
+    numberOfSlides = document.querySelectorAll('.slide').length
+
+    // the required distance between touchStart and touchEnd to be detected as a swipe
+    const minSwipeDistance = 50
+
+    const onTouchStart = (e: any) => {
+        setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+        setTouchStart(e.targetTouches[0].clientX)
+    }
+
+    const onTouchMove = (e: any) => setTouchEnd(e.targetTouches[0].clientX)
+
+    const onTouchEnd = () => {
+
+        if (!touchStart || !touchEnd) return
+        const distance = touchStart - touchEnd
+        const isLeftSwipe = distance > minSwipeDistance
+        const isRightSwipe = distance < -minSwipeDistance
+
+        if (isLeftSwipe) {
+            const sliderContainer = document.querySelector('.slider-container') as HTMLElement
+            if (currentSlideIndex + 1 < numberOfSlides) {
+                sliderContainer.style.transform = `translate(${-100 * (currentSlideIndex + 1)}%)`
+                setCurrentSlideIndex(currentSlideIndex + 1)
+            }
+        }
+
+        if (isRightSwipe) {
+            const sliderContainer = document.querySelector('.slider-container') as HTMLElement
+            if (currentSlideIndex - 1 >= 0) {
+                sliderContainer.style.transform = `translate(${-100 * (currentSlideIndex - 1)}%)`
+                setCurrentSlideIndex(currentSlideIndex - 1)
+            }
+        }
+    }
+
+    const moveToHomePage = () => {
+        setCurrentSlideIndex(0)
+        const sliderContainer = document.querySelector('.slider-container') as HTMLElement
+        sliderContainer.style.transform = `translate(0%)`
+    }
+
+    const nextSlide: any = () => {
+        const sliderContainer = document.querySelector('.slider-container') as HTMLElement
+        if (currentSlideIndex + 1 < numberOfSlides) {
+            sliderContainer.style.transform = `translate(${-100 * (currentSlideIndex + 1)}%)`
+            setCurrentSlideIndex(currentSlideIndex + 1)
+        }
+    }
+
     return (
-        <section className='slider'>
+        <section className='slider' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
             <div className='slider-container container'>
-                <nav className='slider-nav'>
-                    <div className='nav__div'>
-                        <img className='slide-nav__homeSVG' src={homeSVG}></img>
-                    </div>
-                    <div className='nav__div'>
-                        <p className='slide-nav__text'>project</p>
-                    </div>
-                </nav>
-                <p className='slide-one__text'>привет,</p>
-                <h2 className='slide-one__title'>это <span>не</span> <br /> коммерческое <br /> задание
-                    <button className='btn btn--slide-one'><img src={btnRightArrow}></img>Что дальше?</button></h2>
-                <img className=" slider__bacteria-img slider__bacteria-img-1" src={bacteriaImg1}></img>
-                <img className=" slider__bacteria-img slider__bacteria-img-2" src={bacteriaImg2}></img>
-                <img className=" slider__bacteria-img slider__bacteria-img-3" src={bacteriaImg3}></img>
-                <img className=" slider__bacteria-img slider__bacteria-img-4" src={bacteriaImg4}></img>
-                <img className=" slider__bacteria-img slider__bacteria-img-5" src={bacteriaImg5}></img>
-                <img className=" slider__bacteria-img slider__bacteria-img-6" src={bacteriaImg6}></img>
-                <img className=" slider__bacteria-img slider__bacteria-img-7" src={bacteriaImg7}></img>
-                <img className=" slider__bacteria-img slider__pink-sperm-1" src={spermImg1}></img>
-                <img className=" slider__bacteria-img slider__pink-sperm-2" src={spermImg2}></img>
-                <img className='slider__copyright' src={onpoint}></img>
+                <SliderContext.Provider value={{ moveToHomePage }}>
+                    <Slide1 nextSlide={nextSlide} />
+                    <Slide2 />
+                    <Slide3 />
+                </SliderContext.Provider>
             </div>
         </section>
     )

@@ -13,6 +13,11 @@
   src: url(fonts/gilroy/Gilroy-Extrabold.woff);
 }
 
+@font-face {
+  font-family: dinpro;
+  src: url(fonts/dinpro/dinpro.otf);
+}
+
 
 /* Указываем box sizing */
 *,

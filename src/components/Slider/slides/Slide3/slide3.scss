@@ -1,0 +1,248 @@
+.slide-3 {
+    display: block;
+    min-width: 1024px;
+    width: 1024px;
+    height: 768px;
+    background: center / cover no-repeat url(../../../../images/backgrounds/bg_3.jpg);
+    z-index: -99;
+}
+
+.slide3__sup-title {
+    position: relative;
+    margin-top: 161px;
+    margin-left: 354px;
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: dinpro;
+    z-index: -4;
+}
+
+.slide3__title {
+    position: relative;
+    margin-top: -9px;
+    margin-left: 345px;
+    letter-spacing: 8px;
+    font-size: 99px;
+    font-weight: 300;
+    text-transform: uppercase;
+    z-index: -4;
+
+    & span {
+        font-family: Gilroy Extrabold;
+    }
+}
+
+.slide3__about {
+    position: relative;
+    display: flex;
+    margin-left: 259px;
+    margin-top: 25px;
+    margin-right: 25px;
+    padding-bottom: 10px;
+    z-index: -4;
+}
+
+.slide3__about__col-1 {
+    width: 55%;
+}
+
+.slide3__about__col-2 {
+    width: 45%;
+}
+
+.slide3__about-text {
+    position: relative;
+    margin-top: 42px;
+    margin-right: 25px;
+    padding: 45px 45px 71px 94px;
+    background-color: white;
+    border-radius: 40px;
+    font-size: 24px;
+    font-family: dinpro;
+    box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+
+    & img {
+        position: absolute;
+        top: -37px;
+        left: 88px;
+        width: 73px;
+    }
+}
+
+.slide3__about-text-2 {
+    position: relative;
+    margin-top: 42px;
+    margin-right: 54px;
+    margin-left: 16px;
+    padding: 46px 76px 44px 42px;
+    background-color: white;
+    border-radius: 40px;
+    font-size: 24px;
+    font-family: dinpro;
+    box-shadow: 5.446px 8.387px 232.5px 17.5px rgb(157 185 198 / 39%);
+
+    & img {
+        position: absolute;
+        top: -28px;
+        left: 38px;
+        width: 73px;
+    }
+}
+
+.btn--slide3 {
+    position: relative;
+    margin-top: 34px;
+    margin-left: 16px;
+    padding-right: 35px;
+    font-size: 28px;
+    font-family: dinpro;
+    cursor: pointer;
+
+    & img {
+        margin-right: 15px;
+        margin-left: -13px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.slide3__popup-substrate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1024px;
+    height: 768px;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -4;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.slide3__popup {
+    position: absolute;
+    top: 123px;
+    left: 152px;
+    width: 811px;
+    height: 574px;
+    border-radius: 40px;
+    background-color: white;
+    z-index: -4;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.slide3__popup__close-btn {
+    position: absolute;
+    top: 31px;
+    right: 32px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.slide3__popup__sup-title {
+    margin-top: 37px;
+    margin-left: 199px;
+    font-family: dinpro;
+    font-weight: 500;
+    font-size: 29px;
+    text-transform: uppercase;
+}
+
+.slide3__popup__page {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.slide3__popup__title {
+    margin-top: -3px;
+    margin-left: 195px;
+    font-weight: 500;
+    font-size: 92px;
+    text-transform: uppercase;
+    font-family: Gilroy Regular;
+    letter-spacing: 13px;
+
+    & span {
+        font-family: Gilroy Extrabold;
+    }
+}
+
+.popup__page-text {
+    font-family: dinpro;
+    margin-left: 200px;
+    margin-top: 22px;
+    font-size: 24px;
+    max-width: 470px;
+
+    & span {
+        font-family: Gilroy Extrabold;
+        color: #8cc9e8;
+        margin-bottom: 10px;
+    }
+
+    & p {
+        margin-top: 4px;
+    }
+}
+
+// Pagination
+
+.slide__popup__pagination {
+    position: absolute;
+    bottom: 32px;
+    left: 200px;
+
+    :nth-last-child(2) {
+        margin-right: 0;
+    }
+}
+
+.pagination__prev-btn {
+    width: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+
+.pagination__next-btn {
+    width: 9px;
+    margin-left: 20px;
+    cursor: pointer;
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+
+.pagination__page-btn {
+    position: relative;
+    top: -3px;
+    margin-right: 10px;
+    padding: 4px;
+    vertical-align: baseline;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid;
+    cursor: pointer;
+
+    &.active {
+        padding: 5px;
+        background-color: #fc6da9;
+        border: none;
+    }
+}
