@@ -11,6 +11,10 @@ import spermImg5 from "../../../../images/slide2_imgs/sperm_5.png"
 
 const Slide2 = () => {
     const [isSpermVisible, setIsSpermVisible] = useState(false)
+    const [sliderPosition, setSliderPosition] = useState(0)
+
+    const slidePointMin = -10;
+    const slidePointMax = 355;
 
     const sperm1Ref: any = useRef(null)
 
@@ -22,6 +26,13 @@ const Slide2 = () => {
         observer.observe(sperm1Ref.current)
     }, [])
 
+
+    const startSlide = (event: any) => {
+        const slideCoordY = event.changedTouches[0].clientY - 266
+        if (slideCoordY >= slidePointMin && slideCoordY <= slidePointMax) {
+            setSliderPosition(slideCoordY)
+        }
+    }
 
     if (isSpermVisible) {
         const spermImgs: NodeListOf<HTMLImageElement> | null = document.querySelectorAll('.slide-2__sperm')
@@ -41,8 +52,15 @@ const Slide2 = () => {
         <div className='slide slide-2'>
             <Nav />
             <h2 className='slide-2__title'>Текст <br /> сообщения</h2>
+            <div className="slider__track"></div>
+
+            <div className="slide-2__scrollbar">
+                <div className="slide-2__scrollbar__track"></div>
+                <div className="slide-2__scrollbar__thumb" style={{ top: sliderPosition + 'px' }} onTouchMove={startSlide}></div>
+            </div>
+
             <div className='slide-2__text-wrapper'>
-                <p className='slide-2__text'><b>Lorem ipsum dolor sit amet,</b> consectetur adipiscing elit, sed do
+                <p className='slide-2__text' style={{ marginTop: - 2 * sliderPosition / (slidePointMax / 100) + 'px' }}><b>Lorem ipsum dolor sit amet,</b> consectetur adipiscing elit, sed do
 
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Duis ut diam quam nulla. Mauris in aliquam sem fringilla ut morbi
